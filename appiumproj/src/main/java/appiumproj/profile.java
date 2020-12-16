@@ -45,7 +45,7 @@ public class profile {
 
   @Test
   public void alltest() {
-	  new WebDriverWait(driver, 600).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Open from Clipboard']"))).click();
+	  new WebDriverWait(driver, 60).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Open from Clipboard']"))).click();
 	  new WebDriverWait(driver, 60).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Description']")));
 	  new TouchAction(driver).press(PointOption.point(870,781)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(30))).moveTo(PointOption.point(874,588)).release().perform();
 	  WebElement el1 = (new WebDriverWait(driver,60)).until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@text='Open Project Using Expo']")));
