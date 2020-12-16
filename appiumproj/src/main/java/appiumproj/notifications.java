@@ -63,8 +63,7 @@ public class notifications {
 	  el7.click(); //menu
 	  new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Notifications']")));
       driver.findElement(By.xpath("//*[@text='Notifications']")).click();
-      new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Hi Mukesh, We have received your grievance with no. #28696 for category of Disabled Welfare. For further updates, please check the Nivedhana app.']")));
-      driver.navigate().back();
+      
   }
   @After
   public void tearDown() {
