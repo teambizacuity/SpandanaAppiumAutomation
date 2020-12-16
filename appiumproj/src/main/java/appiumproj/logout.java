@@ -45,11 +45,11 @@ public class logout {
 
   @Test
   public void alltest() {
-	  new WebDriverWait(driver, 60).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Open from Clipboard']"))).click();
+	  new WebDriverWait(driver, 600).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Open from Clipboard']"))).click();
 	  new WebDriverWait(driver, 60).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Description']")));
 	  new TouchAction(driver).press(PointOption.point(870,781)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(30))).moveTo(PointOption.point(874,588)).release().perform();
-	  WebElement el12 = (new WebDriverWait(driver,60)).until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@text='Open Project Using Expo']")));
-	  el12.click();
+	  WebElement el1 = (new WebDriverWait(driver,60)).until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@text='Open Project Using Expo']")));
+	  el1.click();
 	  new WebDriverWait(driver, 60).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='English']")));
       driver.findElement(By.xpath("//*[@text='English']")).click();
       new WebDriverWait(driver, 60).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Got it']")));
@@ -59,8 +59,8 @@ public class logout {
       driver.findElement(By.xpath("//*[@text='SEND OTP']")).click();
       WebElement e16 = (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.EditText")));
 	  e16.sendKeys("1001"); //OTP override
-	  WebElement en1 = (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup")));
-	  en1.click();//MENU
+	  WebElement el7 = (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup")));
+	  el7.click();//MENU
 	  new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Logout']"))).click();
 	  new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Yes']"))).click();
 
