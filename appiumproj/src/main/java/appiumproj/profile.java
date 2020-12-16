@@ -22,7 +22,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.interactions.touch.TouchActions;
 
-public class notifications {
+public class profile {
 
   private AndroidDriver driver;
 
@@ -45,11 +45,11 @@ public class notifications {
 
   @Test
   public void alltest() {
-	  new WebDriverWait(driver, 60).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Open from Clipboard']"))).click();
+	  new WebDriverWait(driver, 600).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Open from Clipboard']"))).click();
 	  new WebDriverWait(driver, 60).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Description']")));
 	  new TouchAction(driver).press(PointOption.point(870,781)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(30))).moveTo(PointOption.point(874,588)).release().perform();
-	  WebElement el12 = (new WebDriverWait(driver,60)).until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@text='Open Project Using Expo']")));
-	  el12.click();
+	  WebElement el1 = (new WebDriverWait(driver,60)).until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@text='Open Project Using Expo']")));
+	  el1.click();
 	  new WebDriverWait(driver, 60).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='English']")));
       driver.findElement(By.xpath("//*[@text='English']")).click();
       new WebDriverWait(driver, 60).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Got it']")));
@@ -60,9 +60,12 @@ public class notifications {
       WebElement e16 = (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.EditText")));
 	  e16.sendKeys("1001"); //OTP override
 	  WebElement el7 = (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup")));
-	  el7.click(); //menu
-	  new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Notifications']")));
-      driver.findElement(By.xpath("//*[@text='Notifications']")).click();
+	  el7.click();//MENU
+	  new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Profile']")));
+      driver.findElement(By.xpath("//*[@text='Profile']")).click();
+      WebElement el9 = (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView")));
+      el9.click();
+
   }
   @After
   public void tearDown() {
